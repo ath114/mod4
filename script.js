@@ -36,10 +36,7 @@ function writeMessage(msg) {
 
   msgEl.append(div, span);
 }
-
-// Check msg against the secret number
-function checkNumber(msg) {
-  const wordToNumber = {
+const wordToNumber = {
     one: 1,
     won: 1,
     two: 2,
@@ -57,6 +54,9 @@ function checkNumber(msg) {
     ten: 10,
   };
 
+// Check msg against the secret number
+function checkNumber(msg) {
+  
   if (wordToNumber[msg]) {
     console.log(`adjusting ${msg} to ${wordToNumber[msg]}`);
     msg = wordToNumber[msg];
@@ -106,3 +106,4 @@ function checkNumber(msg) {
     msgEl.append(div);
   }
 }
+
